@@ -51,22 +51,21 @@ of the steps that you need to follow to get the device up and running:
 **Installing the OS**
 
 Download [[Raspbian Jessie
-image]{.ul}](https://www.raspberrypi.org/downloads/raspbian/). You can
+image]](https://www.raspberrypi.org/downloads/raspbian/). You can
 download the zip file. However, if are facing problems downloading the
 zip file, you can use the torrent link instead.
 
 Download [[Win32DiskImager
-installer]{.ul}](https://sourceforge.net/projects/win32diskimager/files/Archive/Win32DiskImager-0.9.5-install.exe/download).
+installer]](https://sourceforge.net/projects/win32diskimager/files/Archive/Win32DiskImager-0.9.5-install.exe/download).
 You need this to burn Raspbian image to your SD card.
 
-Download [[PuTTY]{.ul}](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) SSH
+Download [[PuTTY]](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) SSH
 client to connect to your RPi's.
 
 Once the OS image is downloaded, burn it to the SD card
 using **Win32DiskImager**:
 
-![](media\image2.png){width="4.239583333333333in"
-height="2.248611111111111in"}
+![Optional Text](../master/media/image2.png)
 
 Plug the microSD card to the first Pi and power it up. Plug the Ethernet
 cable and return to your computer to access the Pi remotely.
@@ -79,13 +78,11 @@ PuTTY.
 
 Launch **PuTTY** and type the IP address of the raspberrypi:
 
-![](media\image3.png){width="4.709027777777778in"
-height="4.549305555555556in"}
+![Optional Text](../master/media/image3.png)
 
 You should see something similar to the image below:
 
-![](media\image4.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image4.png)
 
 Login to your raspberry pi as: **pi** and password: **raspberry (each
 RPi uses same login/password)**
@@ -102,9 +99,8 @@ Type: **sudo raspi-config** to configure your device:
 
 5.  Finish and leave the configuration
 
-Now, you can start installing **MPICH3** and **MPI4PY**. Please note
-that this project will take more than 4 hours to complete, so ensure
-that you have enough time at your disposal to complete it.
+Now, you can start installing **MPICH3** and **MPI4PY**. 
+
 
 **Installing MPICH3**
 
@@ -114,16 +110,14 @@ Follow the steps mentioned at mpich3_mpi4_install.sh to install version
 Once everything is installed, you should be able to see something like
 the image below:
 
-![](media\image5.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image5.png)
 
 **Installing MPI4PY**
 
 Once everything is installed, you should be able to see something like
 the image below:
 
-![](media\image6.png){width="6.272222222222222in"
-height="6.309722222222222in"}
+![Optional Text](../master/media/image6.png)
 
 Now, the configuration of the first RPi is complete. Then, you will have
 to clone this SD card and put them into the other RPi's.
@@ -144,7 +138,7 @@ network:
 **pi01:**
 
 Use a [[network
-scanner]{.ul}](https://www.softperfect.com/products/networkscanner/) to
+scanner]](https://www.softperfect.com/products/networkscanner/) to
 find the IP address of the newly added device. Once detected, use PuTTY
 to access it and use the commands below to set it up:
 
@@ -169,8 +163,7 @@ each RPi will have its own IP. Now, you need to store each IP address
 into a host file also known as machinefile. This file contains the hosts
 which start the processes on.
 
-![](media\image7.png){width="6.666666666666667in"
-height="4.211111111111111in"}
+![Optional Text](../master/media/image7.png)
 
 Go to your first RPi and type:
 
@@ -179,8 +172,7 @@ Go to your first RPi and type:
 Then, add the following IP addresses: (Note that you will have to add
 your own)
 
-![](media\image8.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image8.png)
 
 This will be used by the MPICH3 to communicate and send/receive messages
 between various nodes.
@@ -199,7 +191,7 @@ you will be able to run MPI without problems once it's completed.
 
 Run the commands in sshKeysRpi.sh from the first Pi:
 
-![](media\image9.png){width="6.0in" height="3.1458333333333335in"}
+![Optional Text](../master/media/image9.png)
 
 Just hit enter (if you don't want to add specific passphrase) when
 running the ssh-keygen, and the RSA key will be automatically generated
@@ -214,8 +206,7 @@ Open the authorized_keys files and you will see the additional keys
 there. Each authorized_keys file on each device should contain 3 keys
 (as stated in the architecture diagram above).
 
-![](media\image10.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image10.png)
 
 Now, the system is ready for testing.
 
@@ -230,8 +221,7 @@ should work fine:
 
 **mpiexec -f machinefile -n 4 hostname**
 
-![](media\image11.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image11.png)
 
 You can see that each device has replied back and every key is used
 without problems.
@@ -243,12 +233,10 @@ Now, run the following command to test a helloworld example:
 
 You should be able to see something like the image below:
 
-![](media\image12.png){width="6.666666666666667in"
-height="4.215972222222222in"}
+![Optional Text](../master/media/image12.png)
 
 Now, your system is **ready** to take any parallel computing application
 that you want to develop.
 
 You can also build your own
-[[pocket-size]{.ul}](https://www.techworm.net/2017/03/create-phone-sized-raspberry-pi-powered-linux-computer-keyboard-display.html)
 Raspberry Pi powered Linux computer.
