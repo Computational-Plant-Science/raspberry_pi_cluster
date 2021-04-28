@@ -8,7 +8,7 @@ Synchronize the image caputring and step motor movement.
 **How to build raspberry pi supercomputer with raspberry pi cluster?**
 
 For the project, firstly select
-[[Jessie]{.ul}](https://www.raspberrypi.org/downloads/raspbian/), the
+[[Jessie]](https://www.raspberrypi.org/downloads/raspbian/), the
 Raspbian operating system based on Debian Linux for Raspberry Pi, as
 this not only comes with some goodies that are installed by default but
 it also allows to install all the components that may be required for
