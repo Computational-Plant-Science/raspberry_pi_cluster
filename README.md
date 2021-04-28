@@ -172,8 +172,6 @@ Go to your first RPi and type:
 Then, add the following IP addresses: (Note that you will have to add
 your own)
 
-![Optional Text](../master/media/image8.png)
-
 This will be used by the MPICH3 to communicate and send/receive messages
 between various nodes.
 
