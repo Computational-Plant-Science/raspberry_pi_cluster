@@ -17,7 +17,7 @@ the project.
 Moving forward, the next step is to choose the programming language. In
 this case, select Python, as it has plenty of libraries available and
 also a nice integration with MPI
-via [[mpi4py]{.ul}](https://pythonhosted.org/mpi4py/) library.
+via [[mpi4py]](https://pythonhosted.org/mpi4py/) library.
 
 **Building raspberry pi cluster**
 
