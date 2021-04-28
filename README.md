@@ -1,3 +1,6 @@
+**3D root scanner**
+
+
 We designed a 3D root scanner to capture images for 3D reconstruction of the root. The 3D root scanner utilizes ten industrial cameras mounted on a rotating curved frame to capture images from all sides of the maize root. Scanning of one maize root completes in five minutes.
 
 ![Optional Text](../master/media/scanner.png)
