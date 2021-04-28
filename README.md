@@ -40,7 +40,8 @@ their prices.
 
 7.  1 x USB Hub
 
-![](media\image1.png)
+![image](media\image1.png)
+
 
 **Configuring your cluster of Raspberry pi**
 
