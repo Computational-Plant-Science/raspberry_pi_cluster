@@ -37,17 +37,17 @@ their prices.
 
 **Hardware requirements:**
 
-1.  4 x Rpi 3 model B 
+1.  10 x Rpi 3 model B 
 
-2.  4 x 16Gb microSD card (Kingston)
+2.  10 x 32Gb microSD card (Kingston)
 
-3.  4 x USB to Micro USB Cable 0.5m 
+3.  10 x USB to Micro USB Cable 0.5m 
 
 4.  2 x Multi-Pi Stackable Raspberry Pi Case 
 
-5.  1 x 5 port desktop switch
+5.  1 x 16 port desktop switch
 
-6.  5 x Ethernet patch cable 0.3m
+6.  10 x Ethernet cable 0.3m
 
 7.  1 x USB Hub
 
