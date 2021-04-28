@@ -1,8 +1,17 @@
-Raspberry pi cluster to control the movement of step motor 
+We designed a 3D root scanner to capture images for 3D reconstruction of the root. The 3D root scanner utilizes ten industrial cameras mounted on a rotating curved frame to capture images from all sides of the maize root. Scanning of one maize root completes in five minutes.
 
-Build raspberry pi cluster and using cluster to control camera array.
 
-Synchronize the image caputring and step motor movement.
+
+Figure: 3D root scanner prototype. (a) 3D root scanner captures images of an excavated maize root grown under field conditions. (b) The stepper motor rotates the curved metal frame with the mounted cameras around the root. (c) The fixture keeps the root in place during scanning. (d) The adjustable camera shelves allow for the free positioning of each camera.  
+
+![Optional Text](../master/media/scanner.png)
+
+To operate the scanner, the root is fixed in the station stand. A stepper motor (Nema 34 CNC High Torque Stepper Motor 13Nm) drives a semicircular metal frame to rotate ten cameras around the root crown . We chose 12800 micro-step resolutions from among the 16 selectable options provided by the Digital Stepper Driver DM860I to convert the micro-steps to angle unit. We drilled 21 equidistant holes into the semicircular frame to provide flexible arrangement of each camera. A rail track along the semicircular frame allows for fine adjustment of the camera tilt and pan direction without compromising stability. The semicircular frame, along with ten low cost and highly versatile imaging cameras (Image Source DFK 27BUJ003 USB 3.0), can rotate around the root system to capture images up to 1-degree steps. The camera ships with the 1/2.3" Aptina CMOS MT9J003 sensor and can achieve high image resolution at 3856×2764 (10.7 MP) up to 7 fps.  
+
+![Optional Text](../master/media/scanner_demo.gif)
+
+
+The core unit of 3D scanner was Raspberry pi cluster, which was used to control the movement of step motor and synchronize the image caputring and step motor movement.
 
 
 **How to build raspberry pi supercomputer with raspberry pi cluster?**
