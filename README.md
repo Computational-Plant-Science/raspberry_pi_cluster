@@ -118,6 +118,8 @@ Now, you can start installing **MPICH3** and **MPI4PY**.
 Follow the steps mentioned at mpich3_mpi4_install.sh to install version
 3.2 of MPICH:
 
+or just execute one file ./mpich3_mpi4_install.sh
+
 Once everything is installed, you should be able to see something like
 the image below:
 
