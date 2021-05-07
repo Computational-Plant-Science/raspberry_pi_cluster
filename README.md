@@ -104,7 +104,7 @@ Type: **sudo raspi-config** to configure your device:
 
 2.  Go to Advanced Options \> HostName \> set it to **PiController**
 
-3.  Go to Advanced Options -\> MemorySplit \> set it to 16
+3.  Go to Advanced Options -\> MemorySplit \> set it to 128
 
 4.  Go to Advanced Options \> SSH \> Enable
 
