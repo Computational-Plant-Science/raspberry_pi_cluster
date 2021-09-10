@@ -251,3 +251,7 @@ that you want to develop.
 
 You can also build your own
 Raspberry Pi powered Linux computer.
+
+
+Reference:
+https://www.techworm.net/2018/03/learn-build-supercomputer-raspberry-pi-3-cluster.html
