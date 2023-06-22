@@ -7,7 +7,7 @@ Author-email: suxingliu@gmail.com
 
 USAGE
 
-python3 camera_img_transfer.py -p /home/pi/code/cam/2018-12-10/ -a 2
+python camera_img_transfer.py -p /home/pi/code/cam/2018-12-10/ -a 2
 
 """
 
@@ -85,7 +85,7 @@ def main(args):
     host_list = []
     
     for i in range(101,110):
-        a = ("192.168.0.%i:" %i)
+        a = ("192.168.1.%i:" %i)
         host_list.append(a)
     
 
@@ -110,10 +110,6 @@ def main(args):
         with closing(Pool(processes = agents)) as pool:
             pool.map(delete_img, host_list)
             pool.terminate()
-        
-        local_delete_cmd = " sudo rm -rf " + folder_path
-        os.system(local_delete_cmd)
-        
     
     elif args['action'] == 3:
         
