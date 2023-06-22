@@ -38,7 +38,7 @@ cd ..
 nano .bashrc
 
 # Add the following to the end of the file
-# PATH=$PATH:/home/rpimpi/mpi-install/bin
+PATH=$PATH:/home/rpimpi/mpi-install/bin
 # to save the details press "CTRL + ^x" -> using CTRL 6 and x
 # press "y" and hit enter to leave.
 
@@ -64,7 +64,7 @@ sudo tar -zxf mpi4py-2.0.0.tar.gz
 cd mpi4py-2.0.0
 
 # install python-dev package
-sudo aptitude install python-dev
+sudo apt install python-dev
 
 # run the setup
 python setup.py build

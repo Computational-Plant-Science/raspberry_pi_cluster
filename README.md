@@ -104,7 +104,7 @@ Type: **sudo raspi-config** to configure your device:
 
 2.  Go to Advanced Options \> HostName \> set it to **PiController**
 
-3.  Go to Advanced Options -\> MemorySplit \> set it to 16
+3.  Go to Advanced Options -\> MemorySplit \> set it to 128
 
 4.  Go to Advanced Options \> SSH \> Enable
 
@@ -117,6 +117,8 @@ Now, you can start installing **MPICH3** and **MPI4PY**.
 
 Follow the steps mentioned at mpich3_mpi4_install.sh to install version
 3.2 of MPICH:
+
+or just execute one file ./mpich3_mpi4_install.sh
 
 Once everything is installed, you should be able to see something like
 the image below:
@@ -249,3 +251,7 @@ that you want to develop.
 
 You can also build your own
 Raspberry Pi powered Linux computer.
+
+
+Reference:
+https://www.techworm.net/2018/03/learn-build-supercomputer-raspberry-pi-3-cluster.html
