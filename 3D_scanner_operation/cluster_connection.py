@@ -21,7 +21,7 @@ def test_connection(host_adr):
     
     cmd_line = "ssh pi@" + ''.join(host_adr) + ' exit'
     
-    #print(cmd_line)   
+    print(cmd_line)   
     
     returned_value = subprocess.call(cmd_line, shell=True)
     
@@ -50,7 +50,7 @@ def main(args):
     host_list = []
     
     for i in range(101,110):
-        a = ['192.168.0.%i' %i]
+        a = ['192.168.1.%i' %i]
         host_list.append(a)
     
     #print host_list

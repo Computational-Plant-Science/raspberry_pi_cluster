@@ -7,7 +7,7 @@ Author-email: suxingliu@gmail.com
 
 USAGE
 
-python3 camera_img_transfer.py -p /home/pi/code/cam/2018-12-10/ -a 2
+python camera_img_transfer.py -p /home/pi/code/cam/2018-12-10/ -a 1
 
 """
 
@@ -85,7 +85,7 @@ def main(args):
     host_list = []
     
     for i in range(101,110):
-        a = ("192.168.0.%i:" %i)
+        a = ("192.168.1.%i:" %i)
         host_list.append(a)
     
 
@@ -101,19 +101,23 @@ def main(args):
         # perform move images in parallel way
         with closing(Pool(processes = agents)) as pool:
             pool.map(move_img, host_list)
-            #pool.map(delete_img, host_list)
+            pool.map(delete_img, host_list)
             pool.terminate()
     
     elif args['action'] == 2:
 
-        # perform move images in parallel way
+        # perform delete images in parallel way
         with closing(Pool(processes = agents)) as pool:
             pool.map(delete_img, host_list)
             pool.terminate()
-        
-        local_delete_cmd = " sudo rm -rf " + folder_path
-        os.system(local_delete_cmd)
-        
+            
+            delete_local = "sudo rm -rf " + folder_path
+
+            try:
+                #subprocess.call(cmd_line + [str(img_name)])
+                os.system(delete_local)
+            except OSError:
+                print("Failed deleting image!\n")
     
     elif args['action'] == 3:
         
@@ -129,7 +133,7 @@ def main(args):
         
         #cmd_line = "pyicmd --host data.cyverse.org --port 1247 --user lsx1980 --passwd lsx6327903 --zone iplant put /iplant/home/lsx1980/root-images " + img_name
         
-        cmd_line = "pyicmd --host data.cyverse.org --port 1247 --user lsx1980 --passwd lsx6327903 --zone iplant put -R /iplant/home/lsx1980/root-images " + folder_name
+        cmd_line = "pyicmd --host data.cyverse.org --port 1247 --user lsx1980 --passwd lsx6327903 --zone iplant put -R /iplant/home/lsx1980/root_images/*.jpg " + folder_name
         
         print(cmd_line)
         
