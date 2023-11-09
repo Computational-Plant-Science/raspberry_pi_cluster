@@ -230,7 +230,7 @@ You can try the below small example to check if your cluster works as
 expected. If everything is configured correctly, the following command
 should work fine:
 
-**mpiexec -f machinefile -n 4 hostname**
+**mpiexec --hostfile machinefile -n 4 hostname**
 
 ![Optional Text](../master/media/image11.png)
 
@@ -239,7 +239,7 @@ without problems.
 
 Now, run the following command to test a helloworld example:
 
-**mpiexec -f machinefile -n 4 python
+**mpiexec -hostfile machinefile -n 4 python
 /home/pi/mpi4py-2.0.0/demo/helloworld.py**
 
 You should be able to see something like the image below:
